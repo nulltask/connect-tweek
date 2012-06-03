@@ -1,0 +1,25 @@
+{
+  "author": "Seiya Konno <nulltask@gmail.com> (http://null.ly)",
+  "name": "connect-tweek",
+  "description": "A extensible proxy middleware for Connect/Express.",
+  "version": "0.0.1",
+  "homepage": "https://github.com/uniba/connect-tweek",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/uniba/connect-tweek.git"
+  },
+  "main": "index",
+  "scripts": {
+    "test": "make test"
+  },
+  "dependencies": {
+    "request": "*"
+  },
+  "devDependencies": {
+    "connect": "2"
+  },
+  "optionalDependencies": {},
+  "engines": {
+    "node": "*"
+  }
+}
