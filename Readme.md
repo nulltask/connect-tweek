@@ -1,4 +1,3 @@
-
 # connect-tweek
 
   A extensible proxy middleware for Connect/Express. Concept is inspired by [Newstweek](http://newstweek.com/).
@@ -40,6 +39,6 @@ proxy
 // http://www.google.com.proxy.example.com/humans.txt
 //   -> http://www.google.com/humans.txt
 var app = connect()
-  .use(connect.vhost('*.proxy.example.com'))  
+  .use(connect.vhost('*.proxy.example.com'), proxy({ suffix: 'proxy.example.com' }))  
   .listen(3000);
 ```
