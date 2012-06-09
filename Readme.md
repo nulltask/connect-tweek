@@ -31,7 +31,7 @@ proxy
       , $ = cheerio.load(body);
       
     $('body')
-      .prepend('<img src="http://www.cs.cmu.edu/~chuck/lennapg/lena_std.tif">'); // inject lenna.
+      .prepend('<img src="http://www.cs.cmu.edu/~chuck/lennapg/len_std.jpg">'); // inject lenna.
     
     next();
   });
@@ -39,6 +39,6 @@ proxy
 // http://www.google.com.proxy.example.com/humans.txt
 //   -> http://www.google.com/humans.txt
 var app = connect()
-  .use(connect.vhost('*.proxy.example.com'), proxy({ suffix: 'proxy.example.com' }))  
+  .use(connect.vhost('*.proxy.example.com', proxy({ suffix: 'proxy.example.com' })))
   .listen(3000);
 ```
