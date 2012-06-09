@@ -17,23 +17,18 @@ var connect = require('connect')
 
 proxy
   .use(function(res, body, next) {
-    // display body
-    console.log(body);
-    next();
-  })
-  .use(function(res, body, next) {
     // add access control headers
     res.headers['Access-Control-Allow-Origin'] = '*/*';
     res.headers['Access-Control-Allow-Credentials'] = 'true';
     next();
   })
-  .use(function(res, body, next) {
-    // modify response body
-    res.body = body.replace('foo', 'bar');
+  .txt.html.js.use(function(res, body, next) {
+    // display body for txt, html and js
+    console.log(body);
     next();
   })
-  .use('www.youtube.com', function(res, body, next) {
-    // scrape for YouTube contents.
+  .html.use('www.youtube.com', function(res, body, next) {
+    // scrape html for YouTube contents.
     var cheerio = require('cheerio')
       , $ = cheerio.load(body);
       
