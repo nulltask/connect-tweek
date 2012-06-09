@@ -12,7 +12,8 @@ $ npm install connect-tweek
 
 ```javascript
 var connect = require('connect')
-  , proxy = require('connect-tweek');
+  , tweek = require('connect-tweek')
+  , proxy = tweek();
 
 proxy
   .use(function(res, body, next) {
@@ -46,7 +47,7 @@ proxy
 // http://www.google.com.proxy.example.com/humans.txt
 //   -> http://www.google.com/humans.txt
 var app = connect()
-  .use(connect.vhost('*.proxy.example.com', proxy({ suffix: 'proxy.example.com' })))
+  .use(connect.vhost('*.proxy.example.com', proxy.middleware({ suffix: 'proxy.example.com' })))
   .listen(3000);
 ```
 
