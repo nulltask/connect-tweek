@@ -33,6 +33,7 @@ proxy
     $('body')
       .prepend('<img src="http://www.cs.cmu.edu/~chuck/lennapg/len_std.jpg">'); // inject lenna.
     
+    res.body = $.html();
     next();
   });
 
