@@ -2,6 +2,12 @@
 
   A extensible proxy middleware for Connect/Express. Concept taken from [Newstweek](http://newstweek.com/).
 
+## Installation
+
+```
+$ npm install connect-tweek
+```
+
 ## Usage
 
 ```javascript
