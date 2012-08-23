@@ -1,3 +1,4 @@
+[![build status](https://secure.travis-ci.org/uniba/connect-tweek.png)](http://travis-ci.org/uniba/connect-tweek)
 # connect-tweek
 
   A extensible proxy middleware for Connect/Express. Concept taken from [Newstweek](http://newstweek.com/).
